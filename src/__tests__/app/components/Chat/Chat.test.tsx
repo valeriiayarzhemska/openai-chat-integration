@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, waitFor, userEvent } from '@/utils/test-utils';
-import Chat from '@/app/components/Chat';
+import Chat from '@/components/Chat';
 
 global.fetch = jest.fn();
 

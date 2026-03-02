@@ -2,6 +2,8 @@ import React from 'react';
 import { render, screen, waitFor, userEvent } from '@/utils/test-utils';
 import Openai from '@/app/openai/page';
 
+import '@testing-library/jest-dom';
+
 global.fetch = jest.fn();
 
 describe('Openai Page Component', () => {
