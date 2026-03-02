@@ -18,13 +18,6 @@ export default function Home() {
                 SWR Todos
               </h2>
             </div>
-            <ul className="space-y-2 text-sm text-black-700">
-              <li>✓ Simple API & minimal setup</li>
-              <li>✓ Automatic revalidation</li>
-              <li>✓ Request deduplication</li>
-              <li>✓ Built-in cache management</li>
-              <li>✓ Focus & reconnect refetching</li>
-            </ul>
           </Link>
 
           <Link
@@ -36,13 +29,6 @@ export default function Home() {
                 React Query Todos
               </h2>
             </div>
-            <ul className="space-y-2 text-sm text-black-700">
-              <li>✓ Advanced cache management</li>
-              <li>✓ Optimistic updates</li>
-              <li>✓ DevTools integration</li>
-              <li>✓ Intelligent query keys</li>
-              <li>✓ Automatic retry logic</li>
-            </ul>
           </Link>
         </div>
 
