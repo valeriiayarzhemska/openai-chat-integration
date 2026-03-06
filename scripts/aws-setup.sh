@@ -15,7 +15,7 @@ NC='\033[0m' # No Color
 PROJECT_NAME="nextjs-app"
 AWS_REGION="us-east-1"
 AWS_ACCOUNT_ID="509194952232"  # Replace with your AWS account ID
-GITHUB_REPO="valeriiayarzhemska/openai-chat-integration"    # Replace with your GitHub repo
+GITHUB_REPO="valeriiayarzhemska/aws-test"    # Replace with your GitHub repo
 
 # Derived names
 HOSTING_BUCKET="${PROJECT_NAME}-hosting"
