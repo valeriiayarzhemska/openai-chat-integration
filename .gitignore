@@ -40,3 +40,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /tests-example
+
+# AWS
+.aws-sam/
+samconfig.toml
+cloudfront-config.json
+codebuild-project.json
+pipeline-config.json
+
+# Python virtual environment (for GPT4All server)
+.venv/
+__pycache__/
+*.pyc

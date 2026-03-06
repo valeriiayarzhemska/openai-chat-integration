@@ -1,0 +1,52 @@
+version: 0.2
+
+# AWS CodeBuild specification file for Next.js static export
+
+env:
+  parameter-store:
+    # Fetch environment variables from AWS Systems Manager Parameter Store
+    OPENAI_API_KEY: /nextjs-app/prod/OPENAI_API_KEY
+    # Add more environment variables as needed
+  # Alternative: Fetch from S3 bucket
+  # secrets-manager:
+  #   OPENAI_API_KEY: arn:aws:secretsmanager:region:account-id:secret:name
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - echo "Installing dependencies..."
+      - npm ci
+      
+  pre_build:
+    commands:
+      - echo "Running pre-build commands..."
+      - echo "Node version:"
+      - node --version
+      - echo "NPM version:"
+      - npm --version
+      # Optional: Run tests
+      # - npm run test
+      
+  build:
+    commands:
+      - echo "Building Next.js application..."
+      - npm run build
+      
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+      - echo "Listing out directory..."
+      - ls -la out/
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: out
+  discard-paths: no
+
+cache:
+  paths:
+    - 'node_modules/**/*'
+    - '.next/cache/**/*'
