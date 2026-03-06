@@ -23,6 +23,7 @@ export default function Chat({ url }: { url: string }) {
     ];
 
     setMessages(newMessages);
+    
     setLoading(true);
 
     try {
